@@ -2,72 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="ej10" content="width=device-width, initial-scale=1.0">
-    <title>Informe Financiero</title>
+  <meta charset="UTF-8">
+  <meta name="ej10" content="width=device-width, initial-scale=1.0">
+  <title>Informe Financiero</title>
 </head>
 <style>
-    .header {
-      display: grid;
-      grid-template-columns: 1fr 340px; /* ajustá 340px si querés más/menos ancho */
-      align-items: center;              /* centra verticalmente las dos columnas */
-      gap: 16px;
-      padding: 18px 24px;
-      font-family: Verdana, Helvetica, sans-serif;
-    }
-    .right-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* centra verticalmente */
-        align-items: center; /* centra horizontalmente */
-        text-align: center; /* por si hay varias líneas */
-        gap: 6px;
-        height: 110px; /* ajusta altura para que coincida visualmente */
-    }
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    /* ajustá 340px si querés más/menos ancho */
+    align-items: center;
+    /* centra verticalmente las dos columnas */
+    gap: 16px;
+    padding: 18px 24px;
+    font-family: Verdana, Helvetica, sans-serif;
+  }
 
-    .left {
-      font-weight: 600;
-      border-bottom: 2px solid #000; /* línea como en la imagen */
-      padding-bottom: 6px;
-      font-size: 5 px;
-      white-space: nowrap;
-    }
+  .right-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centra verticalmente */
+    align-items: center;
+    /* centra horizontalmente */
+    text-align: center;
+    /* por si hay varias líneas */
+    gap: 6px;
+    height: 110px;
+    /* ajusta altura para que coincida visualmente */
+  }
 
-     .gov {
-      font-size: 12px;
-      line-height: 1;
-    }
+  .left {
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+    /* línea como en la imagen */
+    padding-bottom: 6px;
+    font-size: 5 px;
+    white-space: nowrap;
+  }
 
-    .org {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 1;
-      text-transform: none;
-    }
+  .gov {
+    font-size: 12px;
+    line-height: 1;
+  }
 
-    .title {
-      font-size: 20px;
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: 0.5px;
-    }
+  .org {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: none;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.5px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 1px solid var(--border-color);
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  th,
+  tr {
+    padding: 12px 10px;
+  }
+
+  thead th {
+    background: #f3f3f3;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
 </style>
 
 <body>
-    <header class="header>">
-        <div class ="right-box">
-            <div class="gov">Gobierno Estado de Baja California Sur </div>
-            <div class="org">Secretaria de Educacion Publica</div>
-           
-            <div class="title">INFORME FINANCIERO</div>
-        </div>
+  <header class="header>">
+    <div class="right-box">
+      <div class="gov">Gobierno Estado de Baja California Sur </div>
+      <div class="org">Secretaria de Educacion Publica</div>
 
-        <div class="left-box">
-            <h2></h2>
-            <div class="gov"> ESCUELA PRIMARIA "VALENTIN FARIAS" T.M</div>
+      <div class="title">INFORME FINANCIERO</div>
+    </div>
+  </header>
+  <div class="left-box">
+    <h2></h2>
+    <div class="gov"> ESCUELA PRIMARIA "VALENTIN FARIAS" T.M</div>
+    <div>                                                        </div>
+  </div>
 
-        </div>
-    </header>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Partida</th>
+          <th>Numero de Partida</th>
+          <th>Concepto</th>
+          <th>Ingresos</th>
+          <th>Egresos</th>
+        </tr>
+      </thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </table>
+  </div>
+
 
 </body>
 
