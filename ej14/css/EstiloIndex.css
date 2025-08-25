@@ -1,0 +1,127 @@
+    .navbar {
+        background: #fff;
+        border-bottom: 1px solid #1d0a30;
+        padding-top: 5 rem;
+        padding-bottom: 0.2rem;
+    }
+
+    /* Navbar: quitar puntitos y distribuir en fila en desktop */
+    .navbar-nav {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-nav .nav-item {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #333 !important;
+        /* color base (ajustalo si querés otro) */
+        text-decoration: none !important;
+        text-align: center;
+        flex: 0 0 auto;
+    }
+
+    .navbar-nav .nav-link {
+        color: #1d1616 !important;
+        /* texto blanco en hover/activo */
+        text-decoration: none !important;
+    }
+
+    /* Responsive: en móvil la lista vuelve a columna */
+    @media (max-width: 991.98px) {
+        .navbar-nav {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0.25rem;
+        }
+
+        .navbar-nav .nav-item {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link {
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    
+
+    /* Estilo general para todas las cards (editable desde aquí) */
+    .club-card {
+        box-sizing: border-box;
+        /* evita recálculos de ancho/alto por padding/border */
+        width: 100%;
+        /* ocupa el 100% de la columna bootstrap */
+        max-width: 360px;
+        /* ancho máximo por card (ajustable) */
+        min-height: 420px;
+        /* altura mínima para que todas queden iguales */
+        border: 2px solid #123d6b;
+        /* borde similar al ejemplo (azul) */
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 22px rgba(16, 40, 80, 0.06);
+        margin: 0 auto;
+        /* centra la card dentro de la columna si sobra espacio */
+        padding: 10;
+    }
+
+    /* Imagen superior: fija y centrada */
+    .club-card .card-img-top {
+        width: auto;
+        max-width: 160px;
+        /* evita que el logo sea gigantesco */
+        height: 120px;
+        /* alto del icono/imagen */
+        object-fit: contain;
+        display: block;
+        margin: 24px auto 8px;
+        background: transparent;
+    }
+
+    /* Body flexible: centro y botón abajo */
+    .club-card .card-body {
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        flex: 1 1 auto;
+    }
+
+    /* Aseguramos que el botón quede pegado abajo */
+    .club-card .btn {
+        margin-top: auto;
+        align-self: center;
+        padding: 10px 22px;
+        border-radius: 8px;
+    }
+
+    /* Ajuste visual en pantallas pequeñas (móvil) */
+    @media (max-width: 575.98px) {
+        .club-card {
+            max-width: 100%;
+            min-height: auto;
+            /* altura fluida para mobile */
+        }
+
+        .club-card .card-img-top {
+            max-width: 120px;
+            height: 96px;
+            margin-top: 18px;
+        }
+
+        .club-card .card-body {
+            padding: 0.85rem;
+        }
+    }
