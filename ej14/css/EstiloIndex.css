@@ -15,7 +15,7 @@
     .mbody {
         padding-top: 100px;
         background-image: linear-gradient(rgba(255, 255, 255, 0.726), rgba(255, 255, 255, 0.315)), url('../Imagenes/abstract-soccer-football-sports-background-with-text-space_1017-54721.avif');
-        padding: 100px;
+        
     }
 
     /* Navbar: quitar puntitos y distribuir en fila en desktop */
