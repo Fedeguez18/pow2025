@@ -20,7 +20,6 @@
     .navbar-nav .nav-item {
 
         color: #333 !important;
-        /* color base (ajustalo si querés otro) */
         text-decoration: none !important;
         text-align: center;
         flex: 0 0 auto;
@@ -28,7 +27,6 @@
 
     .navbar-nav .nav-link {
         color: #1d1616 !important;
-        /* texto blanco en hover/activo */
         text-decoration: none !important;
     }
 
@@ -95,12 +93,12 @@
 
     /* Body flexible: centro y botón abajo */
     .club-card .card-body {
-        padding: 1.25rem;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 12px;
+        gap: 8px;
         flex: 1 1 auto;
 
     }
