@@ -56,7 +56,7 @@
     .club-card {
         box-sizing: border-box;
         /* evita recálculos de ancho/alto por padding/border */
-        width: 100%;
+        /*width: 100%;*/
         /* ocupa el 100% de la columna bootstrap */
         max-width: 360px;
         /* ancho máximo por card (ajustable) */
