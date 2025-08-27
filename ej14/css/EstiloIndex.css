@@ -18,7 +18,7 @@
     }
 
     .navbar-nav .nav-item {
-        
+
         color: #333 !important;
         /* color base (ajustalo si querés otro) */
         text-decoration: none !important;
@@ -50,20 +50,15 @@
         }
     }
 
-    
+
 
     /* Estilo general para todas las cards (editable desde aquí) */
     .club-card {
         box-sizing: border-box;
-        /* evita recálculos de ancho/alto por padding/border */
-        /*width: 100%;*/
-        /* ocupa el 100% de la columna bootstrap */
+        width: 100%;
         max-width: 360px;
-        /* ancho máximo por card (ajustable) */
         min-height: 420px;
-        /* altura mínima para que todas queden iguales */
         border: 2px solid #123d6b;
-        /* borde similar al ejemplo (azul) */
         border-radius: 12px;
         overflow: hidden;
         background: #fff;
@@ -71,8 +66,18 @@
         flex-direction: column;
         box-shadow: 0 8px 22px rgba(16, 40, 80, 0.06);
         margin: 0 auto;
-        /* centra la card dentro de la columna si sobra espacio */
-        padding: 10;
+        padding: 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .club-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(16, 40, 80, 0.12);
+        text-decoration: none;
+        color: inherit;
     }
 
     /* Imagen superior: fija y centrada */
@@ -97,6 +102,7 @@
         text-align: center;
         gap: 12px;
         flex: 1 1 auto;
+
     }
 
     /* Aseguramos que el botón quede pegado abajo */
@@ -105,6 +111,7 @@
         align-self: center;
         padding: 10px 22px;
         border-radius: 8px;
+        pointer-events: none;
     }
 
     /* Ajuste visual en pantallas pequeñas (móvil) */
