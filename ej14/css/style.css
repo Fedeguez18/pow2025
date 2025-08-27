@@ -3,7 +3,7 @@
     
 }
 
-body {
+.mbody {
       background-color: #ebebeb;
 }
 .card {
@@ -23,4 +23,12 @@ body {
 }
 .negrita{
     font-weight:500;
+}
+.colorFooter{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer{
+    height: 200px;
 }

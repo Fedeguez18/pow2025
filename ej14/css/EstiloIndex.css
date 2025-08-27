@@ -1,9 +1,17 @@
     .navbar {
         background: #fff;
-        border-bottom: 1px solid #1d0a30;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         padding-top: 5 rem;
         padding-bottom: 0.2rem;
+        
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000; /* Asegura que la barra esté encima de otros elementos */
     }
+    .mbody{
+        padding-top: 100px;
+     }
 
     /* Navbar: quitar puntitos y distribuir en fila en desktop */
     .navbar-nav {
