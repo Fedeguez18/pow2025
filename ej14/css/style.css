@@ -32,3 +32,8 @@
 footer{
     height: 200px;
 }
+@media (max-width: 768px) {
+    footer{
+        height: auto;
+    }
+}
