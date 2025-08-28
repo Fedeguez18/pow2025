@@ -1,0 +1,65 @@
+#calculadora{
+    width: 300px;
+    height: 520px;
+    margin: auto;
+    border: 2px solid rgb(17, 99, 250);
+    border-radius: 10px;
+    background-color: #141414;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+#title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+}
+.vsalida{
+    text-align: right;
+    color: black;
+    height: 50px;
+    width: 280px;
+    margin: auto;
+    font-size: 30px;
+    background-color: rgb(247, 247, 247);
+    border: 5px #61f368;
+    border-radius: 10px;
+}
+#teclado{
+    height: 400px;
+}
+#buttonC, #backspace{
+    background-color: rgb(196, 88, 0);
+    color: white;
+    font-size: 20px;
+    border-radius: 30%;
+    width: 50px;
+    height: 50px
+}
+
+#negativo,#porcentaje, #division, #multiplicacion, .suma, .resta {
+    background-color: rgba(252, 124, 124, 0.966);
+    color: white;
+    font-size: 20px;
+    border-radius: 30%;
+    width: 50px;
+    height: 50px;
+    
+} 
+
+.igual{
+    background-color: rgb(3, 185, 58);
+    color: white;
+    font-size: 20px;
+    border-radius: 30%;
+    width: 50px;
+    height: 50px;
+}
+
+.numero, #punto{
+    background-color: rgb(40, 142, 238);
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}

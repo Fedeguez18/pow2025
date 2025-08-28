@@ -6,28 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="Estilo.css">
 </head>
 
 <body>
     <div id="calculadora">
         <form name="form">
-            <h1 id='title'>Calculadora</h1>
-            <input type="text" class="vsaida" id="visor" name="visor">
+            <h1 id='title'>Calculadora Basica</h1>
+            <input type="text" class="vsalida" id="visor" name="visor">
         </form>
         <table id="teclado">
             <td>
-                <input type="button" class="limpar" id="buttonC" onclick="zerar(0)" value="CE">
-                <input type="button" class="botaoAux" id="backspace" onclick="backspace()" value="C">
-                <input type="button" class="botaoAux" onclick="porcentagem()" value="%">
-                <input type="button" class="divisao" id="divisao" onclick="operacao('/')" value="÷">
+                <input type="button" class="limpiar" id="buttonC" onclick="zerar(0)" value="CE">
+                <input type="button" class="botAux" id="backspace" onclick="backspace()" value="C">
+                <input type="button" class="botAux" id="negativo" onclick="masMenos()" value="+/-">
+                <input type="button" class="botAux" id="porcentaje" onclick="porcentage()" value="%">
+                
             </td>
             <tr>
                 <td>
                     <input type="button" class='numero' onclick="preencher(7)" value="7">
                     <input type="button" class='numero' onclick="preencher(8)" value="8">
                     <input type="button" class='numero' onclick="preencher(9)" value="9">
-                    <input type="button" class="multiplicacao" onclick="operacao('*')" value="x">
+                    <input type="button" class="division" id="division" onclick="operacion('/')" value="÷">
+                    
                 </td>
             </tr>
             <tr>
@@ -35,7 +37,8 @@
                     <input type="button" class='numero' onclick="preencher(4)" value="4">
                     <input type="button" class='numero' onclick="preencher(5)" value="5">
                     <input type="button" class='numero' onclick="preencher(6)" value="6">
-                    <input type="button" class="subtracao" onclick="operacao('-')" value="-">
+                    <input type="button" class="multiplicacion" id="multiplicacion" onclick="operacion('*')" value="x">
+                    
                 </td>
             </tr>
             <tr>
@@ -43,15 +46,17 @@
                     <input type="button" class='numero' onclick="preencher(1)" value="1">
                     <input type="button" class='numero' onclick="preencher(2)" value="2">
                     <input type="button" class='numero' onclick="preencher(3)" value="3">
-                    <input type="button" class="soma" onclick="operacao('+')" value="+">
+                    <input type="button" class="resta" onclick="operacion('-')" value="-">
+                    
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="button" class="botaoAux" id="negativo" onclick="maisMenos()" value="+/-">
+
                     <input type="button" class='numero' onclick="preencher(0)" value="0">
-                    <input type="button" class="botaoAux" id="ponto" onclick="ponto()" value=".">
+                    <input type="button" class="botAux" id="punto" onclick="punto()" value=".">
                     <input type="button" class="igual" onclick='calcular()' value="=">
+                    <input type="button" class="suma" onclick="operacion('+')" value="+">
                 </td>
             </tr>
         </table>
