@@ -1,0 +1,95 @@
+/*Cuerpo*/
+#calculadora{
+    width: 300px;
+    height: 520px;
+    margin: auto;
+    border: 2px solid rgb(17, 99, 250);
+    border-radius: 10px;
+    background-color: #141414;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 20px;
+}
+#title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+}
+/* Visor */
+.vsalida{
+    text-align: right;
+    color: black;
+    height: 50px;
+    width: 280px;
+    margin: auto;
+    font-size: 30px;
+    background-color: rgb(247, 247, 247);
+    border: 5px #61f368;
+    border-radius: 10px;
+}
+
+/* Distribución equitativa manteniendo la estructura con tablas */
+#teclado{
+    width: 100%;
+    table-layout: fixed; /* fuerza columnas de igual tamaño cuando haya celdas separadas */
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+/* Cada td contiene 4 botones; hacemos que actúe como grid de 4 columnas */
+#teclado td {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 6px 0;
+}
+
+/* Botones: ocupan toda la celda del grid y tienen altura uniforme */
+#teclado input[type="button"]{
+    width: 100%;
+    height: 62px;               /* ajustar según prefieras */
+    font-size: 18px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-grid;
+    place-items: center;
+    padding: 0;
+}
+
+/*Botones*/
+#buttonC, #backspace{
+    background-color: rgb(196, 88, 0);
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+}
+#negativo,#porcentaje, #division, #multiplicacion, .suma, .resta {
+    background-color: rgba(252, 124, 124, 0.966);
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+} 
+.igual{
+    background-color: rgb(3, 185, 58);
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.numero, #punto{
+    background-color: rgb(40, 142, 238);
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Responsive*/
+@media (max-width: 420px){
+    #teclado input[type="button"]{
+        height: 52px;
+        font-size: 16px;
+    }
+}
