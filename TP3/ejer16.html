@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function validarDNI(dni) {
+           let sinGuiones = '';
+           
+
+            //elimina guiones
+            for(let i=0; i<dni.length; i++){
+                const caracter = dni[i];
+                if(caracter >= '0' && caracter <= '9'){
+                    sinGuiones += caracter;
+                }
+            }
+             if(sinGuiones.length < 11){
+                return "DNI incompleto";
+            }
+
+            let tipo = parseInt(sinGuiones.slice(0, 2));
+            let digitos = parseInt(sinGuiones[10]);
+
+            if (![20, 23, 24, 27, 30, 33, 34].includes(tipo)){
+                return "Tipo de DNI inválido";
+            }
+            
+            
+
+            //
+            
+            let multiplicadores = [5,4,3,2,7,6,5,4,3,2];
+            let suma = 0;
+
+            for(let i=0; i< 10; i++){
+                suma += parseInt(sinGuiones[i]) * multiplicadores[i];
+            }
+
+            let resto = suma % 11;
+            let dvCalculado;
+
+            if (resto === 0) {
+                dvCalculado = 0;
+            } else if (resto === 1) {
+                dvCalculado = 9; // caso especial
+            } else {
+                dvCalculado = 11 - resto;
+            }
+
+            return dvCalculado === digitos ? "verdadero" : "Dígito verificador incorrecto";
+            
+        }
+
+        console.log(validarDNI('20-45109516-6'));
+
+        
+    </script>
+</head>
+<body>
+    <main>
+        <form action="">
+            <input type="text" name="Documento" id="DNI" placeholder="20-12345678-9">
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+</body>
+</html>
