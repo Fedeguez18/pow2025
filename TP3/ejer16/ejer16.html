@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar DNI</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; padding: 2rem; background:#fafafa; color:#111; }
+        main { max-width:420px; margin:0 auto; }
+        input[type="text"]{ width:100%; padding:10px 12px; font-size:16px; border:1px solid #ccc; border-radius:6px; box-sizing:border-box; }
+        input[type="submit"]{ margin-top:10px; padding:10px 14px; font-size:16px; border-radius:6px; cursor:pointer; }
+
+        /* Resultado */
+        #result{
+            margin-top:16px;
+            padding:12px 14px;
+            border-radius:8px;
+            box-shadow:0 6px 18px rgba(0,0,0,0.06);
+            opacity:0;
+            transform:translateY(-8px);
+            transition:opacity .28s ease, transform .28s ease;
+            display:block;
+        }
+        #result.show{ opacity:1; transform:translateY(0); }
+
+        #result.success{ background:#e9fff0; color:#06543b; border:1px solid #b8f0cf; }
+        #result.error{ background:#fff0f0; color:#7a0b0b; border:1px solid #ffbdbd; animation: none; }
+
+        /* Shake para error */
+        @keyframes shake {
+            0%{ transform:translateX(0); }
+            20%{ transform:translateX(-6px); }
+            40%{ transform:translateX(6px); }
+            60%{ transform:translateX(-4px); }
+            80%{ transform:translateX(4px); }
+            100%{ transform:translateX(0); }
+        }
+        #result.error.show{ animation: shake .36s linear; }
+
+        /* pequeña ayuda */
+        .hint{ font-size:0.9rem; color:#666; margin-top:6px; }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form id="dniForm" novalidate>
+            <label for="DNI">Documento</label>
+            <input type="text" name="Documento" id="DNI" placeholder="20-12345678-9" inputmode="numeric" autocomplete="off">
+            <input type="submit" value="Validar">
+        </form>
+
+        <div id="result" role="status" aria-live="polite"></div>
+        <div class="hint">Ejemplo de formato: 20-12345678-9 o solo números 20123456789</div>
+    </main>
+
+    <script src="funcion.js"></script>
+</body>
+
+</html>
