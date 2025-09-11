@@ -1,5 +1,5 @@
 function validarCuilCuit(valor) {
-    // 1️⃣ Normalizar: quitar guiones y espacios
+    // 1️ Normalizar: quitar guiones y espacios
     let cuit = valor.replace(/-/g, "").trim();
 
     // 2️⃣ Validar formato básico: debe tener 11 dígitos
@@ -48,37 +48,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const result = document.getElementById('result');
     let hideTimer = null;
 
-    function showMessage(text, ok){
+    function showMessage(text, ok) {
         clearTimeout(hideTimer);
         result.textContent = text;
         result.className = ''; // reset
         result.classList.add(ok ? 'success' : 'error', 'show');
         // mantener visible 4.5s y luego ocultar (opcional)
-        hideTimer = setTimeout(()=> result.classList.remove('show'), 4500);
+        hideTimer = setTimeout(() => result.classList.remove('show'), 4500);
     }
 
-    function validarDNI(valor){
-        const sin = String(valor).replace(/\D/g,''); // sólo dígitos
-        if (sin.length !== 11) return { ok:false, msg:'El DNI debe tener exactamente 11 dígitos.' };
+    function validarDNI(valor) {
+        const sin = String(valor).replace(/\D/g, ''); // sólo dígitos
+        if (sin.length !== 11) return { ok: false, msg: 'El DNI debe tener exactamente 11 dígitos.' };
 
-        const digitos = sin.split('').map(d => parseInt(d,10));
-        const tipo = parseInt(sin.slice(0,2),10);
-        const validTipos = [20,23,24,27,30,33,34]; // opcional
+        const digitos = sin.split('').map(d => parseInt(d, 10));
+        const tipo = parseInt(sin.slice(0, 2), 10);
+        const validTipos = [20, 23, 24, 27, 30, 33, 34]; // opcional
         if (!validTipos.includes(tipo)) {
-            // no obligatorio fallar, sólo advertencia; aquí lo consideramos válido pero avisamos
+            // sólo me hace una advertencia; aquí lo consideramos válido pero avisamos
             // return { ok:false, msg:'Prefijo (dos primeros dígitos) no reconocido.' };
         }
 
-        const mult = [5,4,3,2,7,6,5,4,3,2];
+        const mult = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2];
         let suma = 0;
-        for(let i=0;i<10;i++){ suma += mult[i] * digitos[i]; }
+        for (let i = 0; i < 10; i++) { suma += mult[i] * digitos[i]; }
         const resto = suma % 11;
         let dv = (resto === 0) ? 0 : (resto === 1) ? 9 : (11 - resto);
 
         if (dv === digitos[10]) {
-            return { ok:true, msg: `DNI válido — ${sin.slice(0,2)}-${sin.slice(2,10)}-${sin.slice(10)}` };
+            return { ok: true, msg: `DNI válido — ${sin.slice(0, 2)}-${sin.slice(2, 10)}-${sin.slice(10)}` };
         } else {
-            return { ok:false, msg: `Dígito verificador incorrecto. Esperado ${dv} (entrada: ${digitos[10]}).` };
+            return { ok: false, msg: `Dígito verificador incorrecto. Esperado ${dv} (entrada: ${digitos[10]}).` };
         }
     }
 

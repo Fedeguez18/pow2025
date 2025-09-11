@@ -31,12 +31,12 @@
 /* Distribución equitativa manteniendo la estructura con tablas */
 #teclado{
     width: 100%;
-    table-layout: fixed; /* fuerza columnas de igual tamaño cuando haya celdas separadas */
+    table-layout: fixed; 
     border-collapse: collapse;
     margin-top: 12px;
 }
 
-/* Cada td contiene 4 botones; hacemos que actúe como grid de 4 columnas */
+/* Cada td contiene 4 botones */
 #teclado td {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -47,7 +47,7 @@
 /* Botones: ocupan toda la celda del grid y tienen altura uniforme */
 #teclado input[type="button"]{
     width: 100%;
-    height: 62px;               /* ajustar según prefieras */
+    height: 62px;               
     font-size: 18px;
     border-radius: 8px;
     box-sizing: border-box;
