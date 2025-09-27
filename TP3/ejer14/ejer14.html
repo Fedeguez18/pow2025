@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="ejer14" content="width=device-width, initial-scale=1.0">
+    <title>sensible_eventos</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Galería sensible a eventos — prueba hover / out / click</h1>
+
+
+    <ul class="gallery" id="gallery">
+        <li class="card"><img class="thumb" src="https://picsum.photos/id/1015/600/400" alt="Imagen 1"
+                data-alt="https://picsum.photos/id/1025/600/400"></li>
+        <li class="card"><img class="thumb" src="https://picsum.photos/id/1024/600/400" alt="Imagen 2"
+                data-alt="https://picsum.photos/id/1003/600/400"></li>
+        <li class="card"><img class="thumb" src="https://picsum.photos/id/1005/600/400" alt="Imagen 3"
+                data-alt="https://picsum.photos/id/1011/600/400"></li>
+        <li class="card"><img class="thumb" src="https://picsum.photos/id/1035/600/400" alt="Imagen 4"
+                data-alt="https://picsum.photos/id/1043/600/400"></li>
+    </ul>
+
+
+    
+    <div id="modal" style="display:none" class="modal" aria-hidden="true">
+        <div class="modalContent" role="dialog" aria-modal="true">
+            <img id="modalImg" src="" alt="Preview">
+            <div class="controls">
+                <button id="swapBtn">Cambiar imagen</button>
+                <button id="printBtn" class="primary">Imprimir</button>
+                <button id="closeBtn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" src="funciones.js"></script>
+</html>

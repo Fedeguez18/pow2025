@@ -44,7 +44,8 @@
     }
 
     /* Responsive: en móvil la lista vuelve a columna */
-    @media (max-width: 991.98px) {
+    @media (max-width: 1800px) {
+        .navbar{background: #1d1616;}
         .navbar-nav {
             flex-direction: column;
             justify-content: flex-start;
