@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el numero</title>
+</head>
+
+<body>
+    <main>
+        <div id="inicio">
+            <h1>Quiero jugar un juego</h1>
+            <p>Al apretar el boton Jugar, se generara un numero aleatorio del 1 al 1000 el cual tendras que adivinar </p>
+            <p>Tienes 20 segundos</p>
+            <button id="generarNRO">Jugar</button>
+        </div>
+
+        <div id="juego" style="display:none;">
+        
+            <form action="">
+                <label for="numero">Elije un numero</label>
+                <input type="number" id="numero" name="numero" min="1" max="1000" required>
+                <button type="button" id="probarNRO">Probar</button>
+                <button type="button" id="reiniciar">Reiniciar</button>
+            </form>
+
+            <div id="estado">
+                <p class="info">Intentos actuales: <span id="intentos">0</span></p>
+                <p class="info">Mejor puntaje: <span id="mejor">-</span></p>
+                <p class="info">Partidas finalizadas: <span id="partidas">0</span></p>
+                <p class="info">Promedio de intentos: <span id="promedio">0</span></p>
+                <p class="info">Mensaje: <span id="mensaje"></span></p>
+            </div>
+
+
+
+        </div>
+
+        <h3>Estadísticas</h3>
+        <ul id="estadisticas"></ul>
+    </main>
+
+    <script src="adivinador.js"></script>
+</body>
+
+</html>
