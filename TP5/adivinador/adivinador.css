@@ -1,0 +1,136 @@
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    background: linear-gradient(90deg, #ebfeff, #809dff);
+    margin: 0; /* Quita el margen por defecto que los navegadores ponen al <body>. */
+    padding: 0;  /* Quita el padding por defecto. */
+    display: flex;/* Convierte el body en un contenedor flex para poder centrar el contenido fácil. */
+    justify-content: center;/* Centra horizontalmente el contenido hijo (aquí el <main>) dentro del body.*/
+    align-items: flex-start; /* Alinea verticalmente al inicio (arriba) */
+    min-height: 100vh;/* Asegura que el body ocupe al menos la altura completa de la ventana (100% de la altura del viewport). */
+    color: #000000; /* Color de texto*/
+}
+
+
+main {
+    font-size: large;
+    background: #ffffff; /* Color de fondo del contenedor principal*/
+    border-radius: 20px;  /* Bordes redondeados del contenedor (20px). */
+    padding: 30px; /* Espacio interno dentro del main, separa contenido de los bordes. */
+    margin-top: 20px; /* Separación arriba respecto al borde superior de la página (esto evita que esté pegado al top). */
+    width: 90%; /* Ancho relativo: ocupa el 90% del ancho de su contenedor (body). */
+    max-width: 600px;/* Limita el ancho máximo a 600px para que no se extienda demasiado en pantallas grandes. */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);/* Sombra externa: 
+       - offset-x: 0 (sin desplazamiento horizontal),
+       - offset-y: 8px (hacia abajo),
+       - blur-radius: 20px,
+       - color: negro con 20% de opacidad. */
+    text-align: center;/* Centra horizontalmente el texto dentro del main (titulares, párrafos). */
+
+}
+
+
+h1 {
+    color: #1518b5;/* Color del título*/
+    font-size: 2.8rem; /* Tamaño del texto del título; rem relativo al font-size raíz. */
+    margin-bottom: 10px; /* Separación debajo del título. */
+    text-shadow: 2px 2px #90a2ff; /* Sombra del texto: 2px a la derecha y 2px hacia abajo*/
+}
+
+#inicio p {
+    font-size: 1.3rem;  /* Tamaño de fuente para los párrafos dentro del contenedor #inicio. */
+    margin-bottom: 15px;
+}
+
+button {
+    background: #1518b5;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #80d7ff;/* Al pasar el ratón, cambia el color de fondo a uno más claro/rosado. */
+    transform: scale(1.05);/* Al pasar el mouse, el botón se agranda un 5% (efecto pop). */
+}
+
+input[type="number"] {
+    padding: 10px;/* Espacio interno del input. */
+    border: 4px solid #2f94e2;
+    border-radius: 10px;/* Bordes redondeados del input. */
+    width: 150px;/* Ancho fijo del input (150px). */
+    font-size: 1rem;/* Tamaño de fuente dentro del input. */
+    text-align: center;  /* Centra el número que escribe el usuario dentro del input. */
+    margin: 10px;
+}
+
+#estado {
+    font-size: large;
+    margin-top: 20px; /* Separación arriba (del formulario). */
+    padding: 15px;
+    background: #ffe6dc;
+    border-radius: 15px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
+    text-align: left;
+    font-size: 1rem;
+} 
+
+#mensaje {
+    font-weight: bold;
+    color: #3449d1;
+}
+
+/* Estadísticas */
+h3 {
+
+    margin-top: 30px;
+    color:#1518b5;
+}
+
+#estadisticas {
+    list-style: none;/* Quita los puntos de la lista (lista limpia). */
+    padding: 0;/* Quita el padding por defecto de la ul. */
+    margin: 0;/* Quita el margin por defecto de la ul. */
+}
+
+#estadisticas li {
+    background: #fff0e6;/* Fondo de cada ítem de la lista (muy suave). */
+    margin: 10px 0;/* Separación vertical entre ítems. */
+    padding: 10px;/* Espacio interno de cada ítem para que no estén pegados. */
+    border-radius: 10px;/* Bordes redondeados de cada ítem. */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ✅ Pantallas medianas (tablets en vertical) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    input[type="number"] {
+        width: 80%;
+    }
+}
+
+/* ✅ Pantallas grandes (monitores grandes) */
+@media (min-width: 1200px) {
+    main {
+        max-width: 800px; /* agrandar el contenedor */
+    }
+
+    h1 {
+        font-size: 3rem; /* título más grande */
+    }
+}
+
