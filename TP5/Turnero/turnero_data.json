@@ -1,0 +1,16 @@
+{
+    "limite_inferior": 1,
+    "limite_superior": 100,
+    "numeros": [
+        33,
+        82,
+        49,
+        77,
+        93,
+        36,
+        58,
+        85,
+        24,
+        53
+    ]
+}

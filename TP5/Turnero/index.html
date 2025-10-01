@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnero</title>
+    <link href="lib/Boostrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="turnero-card">
+            <h1 class="text-center mb-4">
+                <i class="bi bi-shuffle"></i> Turnero Aleatorio
+            </h1>
+
+            <div id="alertContainer"></div>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <label for="limiteInferior" class="form-label">
+                        <i class="bi bi-arrow-down-circle"></i> Límite Inferior
+                    </label>
+                    <input type="number" class="form-control" id="limiteInferior" value="1" min="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="limiteSuperior" class="form-label">
+                        <i class="bi bi-arrow-up-circle"></i> Límite Superior
+                    </label>
+                    <input type="number" class="form-control" id="limiteSuperior" value="100" min="1">
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-generar w-100 mb-3" id="btnGuardarLimites">
+                <i class="bi bi-save"></i> Guardar Límites
+            </button>
+
+            <div class="numero-display" id="numeroDisplay">
+                <span id="numeroText">Presiona Generar</span>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button class="btn btn-generar" id="btnGenerar">
+                    <i class="bi bi-dice-3"></i> Generar Número
+                </button>
+                <button class="btn btn-reiniciar" id="btnReiniciar">
+                    <i class="bi bi-arrow-clockwise"></i> Reiniciar Sistema
+                </button>
+            </div>
+
+            <div class="stats-info">
+                <h5><i class="bi bi-graph-up"></i> Estadísticas</h5>
+                <div class="stat-item">
+                    <span>Rango configurado:</span>
+                    <strong id="rangoActual">-</strong>
+                </div>
+                <div class="stat-item">
+                    <span>Números generados:</span>
+                    <strong id="cantidadGenerados">0</strong>
+                </div>
+                <div class="stat-item">
+                    <span>Números disponibles:</span>
+                    <strong id="cantidadDisponibles">-</strong>
+                </div>
+                <div class="stat-item">
+                    <span>Progreso:</span>
+                    <div class="progress" style="width: 150px; height: 20px;">
+                        <div class="progress-bar" role="progressbar" id="progressBar"
+                            style="width: 0%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            0%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="numeros-generados" id="numerosGenerados">
+                <h5><i class="bi bi-list-check"></i> Números Generados</h5>
+                <div id="listaNumeros"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-spinner">
+        <div class="spinner-border text-light" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+    </div>
+    <script src="lib/Boostrap/js/bootstrap.js"></script>
+    <script src="func.js"></script>
+    
+</body>
+</html>
