@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivina el numero</title>
+    <link rel="stylesheet" href="adivinador.css">
 </head>
 
 <body>
     <main>
         <div id="inicio">
-            <h1>Quiero jugar un juego</h1>
-            <p>Al apretar el boton Jugar, se generara un numero aleatorio del 1 al 1000 el cual tendras que adivinar </p>
+            <h1>Juego: Adivina el número</h1>
+            <p>Al apretar el botón Jugar, se generará un número aleatorio entre 1 y 1000 el cual tendrás que adivinar </p>
             <p>Tienes 20 segundos</p>
             <button id="generarNRO">Jugar</button>
         </div>
@@ -19,7 +20,7 @@
         <div id="juego" style="display:none;">
         
             <form action="">
-                <label for="numero">Elije un numero</label>
+                <label for="numero">Elije un número</label>
                 <input type="number" id="numero" name="numero" min="1" max="1000" required>
                 <button type="button" id="probarNRO">Probar</button>
                 <button type="button" id="reiniciar">Reiniciar</button>
