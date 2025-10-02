@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo y layout */
+body {
+  background: linear-gradient(135deg, #364c55, #79c7a1, #2c5364);
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor principal */
+main {
+  background-color: #1e2a38;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fefefe;
+}
+
+/* Texto */
+p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  color: #d1d1d1;
+}
+
+/* Labels e inputs */
+label {
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  color: #ccc;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #2b3a4c;
+  color: #fff;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border: 1px solid #00d9a5;
+}
+
+/* Botones */
+button {
+  margin-top: 1.2rem;
+  margin-right: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#generarNRO {
+  background-color: #79c7a1;
+  color: #1e2a38;
+}
+
+#generarNRO:hover {
+  background-color: #85e7d0;
+}
+
+#reiniciar {
+  background-color: #79c7a1;
+  color: #1e2a38;
+}
+
+#reiniciar:hover {
+  background-color: #ff7e7e;
+}
+
+/* Resultado */
+h2 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+
+#nroGenerado {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #00d9a5;
+}
