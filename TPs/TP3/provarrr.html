@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #e9da59;
+            /* amarillo */
+            color: #5c065f;
+            /* contraste */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 1rem;
+            align-items: center;
+        }
+
+        .layout {
+            display: flex;
+
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .card {
+            position: relative;
+            padding-right: 40px;
+            background-color: white;
+            /*height: 40px;*/
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+            color: blue;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        h5{
+            margin-top: 10px;
+        }
+
+        .card .negro{
+            position: absolute;
+            right: 0px;
+            /* separación desde el borde derecho */
+            top: 50%;
+            transform: translateY(-50%);
+            /* centra verticalmente */
+            width: 30px;
+            height: 40px;
+            background: #000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="layout">
+        <div class="col-lg-3 mb-3">
+            <section>
+                <div class="card">
+                    <div class="negro"></div>
+                    <h5 > Pagina principal</h5>
+
+                </div>
+
+            </section>
+
+            <section>
+                <div class="card">
+                    <div class="negro"></div>
+                    <h5>Mediciones</h5>
+                </div>
+            </section>
+            <section>
+                <div class="card">
+                    <div class="negro"></div>
+                    <h5>Mi ciudad</h5>
+                </div>
+            </section>
+            <section>
+                <div class="card">
+                    <div class="negro"></div>
+                    <h5>Enlaces</h5>
+                </div>
+            </section>
+        </div>
+
+        <div class="texto">
+            <h1>Mi primera pagina con estilo</h1>
+            <p>¡Bienvenidos a mi primera pagina con estilo!</p>
+            <p>No tiene imagenes, pero tiene estilo.Tambien tiene enlaces, aunque no te lleven a ningun sitio.</p>
+            <p>Deberia haber mas cosas aqui, pero todavia no se que poner.</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
